@@ -2,7 +2,7 @@ const key = "6x9BeABWtlvcAfYyRS0be5tItZY4p6dj";
 
 // Colllection weather condition
 const getWeather = async(id) => {
-    const endpoint = "http://dataservice.accuweather.com/currentconditions/v1/";
+    const endpoint = "https://dataservice.accuweather.com/currentconditions/v1/";
     const query = `${id}?apikey=${key}`;
 
     const response = await fetch(endpoint + query);
@@ -13,7 +13,7 @@ const getWeather = async(id) => {
 
 // Collecting location key
 const getCity = async(city) => {
-    const endpoint = "http://dataservice.accuweather.com/locations/v1/cities/search";
+    const endpoint = "https://dataservice.accuweather.com/locations/v1/cities/search";
     const query = `?apikey=${key}&q=${city}`;
     const response = await fetch(endpoint + query);
     const data = await response.json();
